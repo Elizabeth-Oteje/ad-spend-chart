@@ -48,7 +48,7 @@ export default function Home() {
       </AnimatePresence>
 
       <motion.div
-        className={`relative z-40 mx-auto space-y-12 transition-all duration-1000 ${focusMode ? "mt-10 max-w-[95vw]" : "max-w-6xl"}`}
+        className={`relative z-40 mx-auto space-y-12 transition-all duration-1000 ${focusMode ? "mt-4 max-w-[95vw]" : "max-w-6xl"}`}
         initial="hidden"
         animate="visible"
         variants={{
@@ -56,7 +56,7 @@ export default function Home() {
         }}
       >
         <header
-          className={`flex items-end justify-between transition-all duration-500 ${focusMode ? "h-0 overflow-hidden opacity-0" : "opacity-100"}`}
+          className={`flex flex-col gap-3 transition-all duration-500 md:flex-row md:items-end md:justify-between ${focusMode ? "h-0 overflow-hidden opacity-0" : "opacity-100"}`}
         >
           <div className="space-y-6">
             <motion.div
@@ -76,7 +76,7 @@ export default function Home() {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <h1 className="mb-4 text-4xl font-black tracking-tight text-white md:text-6xl">
+              <h1 className="mb-6 text-4xl font-black tracking-tight text-white md:mb-4 md:text-6xl">
                 Every dollar{" "}
                 <span className="bg-gradient-to-r from-brand-purple to-emerald-400 bg-clip-text text-transparent">
                   tells a story.
@@ -88,16 +88,20 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <motion.button
+          <motion.div
             variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setFocusMode(true)}
-            className="group hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-bold transition-colors hover:bg-white/10 md:flex"
+            className="flex justify-end"
           >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-brand-purple transition-colors group-hover:bg-emerald-400" />
-            Enter Focus Mode
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setFocusMode(true)}
+              className="group flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-bold transition-colors hover:bg-white/10"
+            >
+              <span className="h-2 w-2 animate-pulse rounded-full bg-brand-purple transition-colors group-hover:bg-emerald-400" />
+              Enter Focus Mode
+            </motion.button>
+          </motion.div>
         </header>
 
         {/* Insight Cards Grid */}
