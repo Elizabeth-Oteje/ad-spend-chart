@@ -8,12 +8,22 @@ AD X-RAY prioritizes a 'High-Tech Intelligence' aesthetic. I chose a deep dark t
 - **Visualization**: Chart.js for canvas-based rendering of complex YoY datasets.
 - **Styling**: Tailwind CSS for a streamlined, responsive design system.
 
-## 🚀 CI/CD & Deployment
+## �️ Getting Started
+Follow these steps to run the application locally:
+
+1.  **Clone & Install**:
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+2.  **Start Development**:
+    ```bash
+    npm run dev
+    ```
+3.  **View App**: Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## �🚀 CI/CD & Deployment
 This project is configured for automated deployment to **Netlify** via GitHub Actions.
 
-### Setup Instructions:
-1.  **Netlify Secrets**: Add the following to your GitHub Repository Secrets:
-    - `NETLIFY_AUTH_TOKEN`: Your Netlify personal access token.
-    - `NETLIFY_SITE_ID`: The API ID of your Netlify site.
-2.  **Push to Main**: Any push to the `main` branch will automatically trigger a production build and deployment.
-3.  **Pull Requests**: PRs will generate unique "Preview Deployments" for testing changes before merging.
+### Instructions:
+1.  **Push to Main**: Any push to the `main` branch will automatically trigger a production build and deployment.
+2.  **Pull Requests**: PRs will generate unique "Preview Deployments" for testing changes before merging.
