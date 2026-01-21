@@ -7,6 +7,12 @@ AD X-RAY prioritizes a 'High-Tech Intelligence' aesthetic. I chose a deep dark t
 - **Core Architecture**: Next.js 16.1.4 and TypeScript using standard React Hooks for high-performance, minimalist data management.
 - **Visualization**: Chart.js for canvas-based rendering of complex YoY datasets.
 - **Styling**: Tailwind CSS for a streamlined, responsive design system.
+- **Formatting**: Prettier and ESLint for consistent code quality and automatic Tailwind class sorting.
+
+## 🛠️ Code Formatting
+To maintain a clean codebase, this project uses Prettier and ESLint.
+- **Auto-format on Save**: If you use VS Code, the project includes workspace settings in `.vscode/settings.json` that will automatically format your code every time you save.
+- **Manual Formatting**: You can run `npx prettier --write .` to format all files in the project.
 
 ## �️ Getting Started
 Follow these steps to run the application locally:
