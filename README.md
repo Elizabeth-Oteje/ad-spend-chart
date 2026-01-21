@@ -1,2 +1,19 @@
-# ad-spend-chart
-Single line chart comparing ad spend year over year
+# Ad Spend Chart (2024 vs 2025)
+
+## Design Decisions
+AD X-RAY prioritizes a 'High-Tech Intelligence' aesthetic. I chose a deep dark theme with a high-contrast Purple/Teal palette to ensure YoY data is instantly distinguishable. Framer Motion was chosen to move beyond static charts; its physics-based springs and orchestrated sequences allow for a cinematic data reveal that feels powerful and intentional. The deliberate 1.5s simulated delay reinforces the high-precision syncing feel of a premium marketing tool.
+
+## Technical Notes
+- **Core Architecture**: Next.js 16.1.4 and TypeScript using standard React Hooks for high-performance, minimalist data management.
+- **Visualization**: Chart.js for canvas-based rendering of complex YoY datasets.
+- **Styling**: Tailwind CSS for a streamlined, responsive design system.
+
+## 🚀 CI/CD & Deployment
+This project is configured for automated deployment to **Netlify** via GitHub Actions.
+
+### Setup Instructions:
+1.  **Netlify Secrets**: Add the following to your GitHub Repository Secrets:
+    - `NETLIFY_AUTH_TOKEN`: Your Netlify personal access token.
+    - `NETLIFY_SITE_ID`: The API ID of your Netlify site.
+2.  **Push to Main**: Any push to the `main` branch will automatically trigger a production build and deployment.
+3.  **Pull Requests**: PRs will generate unique "Preview Deployments" for testing changes before merging.
